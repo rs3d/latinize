@@ -1,0 +1,26 @@
+{
+  "name": "latinize-amd",
+  "main": "latinize-amd.js",
+  "version": "0.1.0",
+  "homepage": "https://github.com/rs3d/latinize",
+  "authors": [
+    "Jakub Dundalek <dundalek@gmail.com> (http://dundalek.com/)",
+    "Robin Schmitz <rob@rs3d.de>"
+  ],
+  "description": "Fork of latinize to add AMD support <https://github.com/dundalek/latinize>: Simple library to convert accents (diacritics) from strings to latin characters.",
+  "keywords": [
+    "string",
+    "latinize",
+    "latinise",
+    "accents",
+    "diacritics"
+  ],
+  "license": "BSD",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
