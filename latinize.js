@@ -1,17 +1,18 @@
-
-(function (factory) {
+(function (root, factory) {
     if (typeof module !== 'undefined' && typeof module.exports !== 'undefined' && typeof require !== 'undefined') {
         // CommonJS
         module.exports = factory();
+    } else if (typeof define === 'function' && define.amd) {
+		define(factory);
     } else {
         // running in browser
-        window.latinize = factory();
+        root.latinize = factory();
     }
-})(function() {
+})(this, function() {
 
 function latinize(str) {
     return str.replace(/[^A-Za-z0-9]/g, function(x) { return latin_map[x] || x; });
-};
+}
 
 var latin_map = {
 'Á': 'A',
@@ -28,7 +29,7 @@ var latin_map = {
 'Ầ': 'A',
 'Ẩ': 'A',
 'Ẫ': 'A',
-'Ä': 'A',
+'Ä': 'Ae',
 'Ǟ': 'A',
 'Ȧ': 'A',
 'Ǡ': 'A',
@@ -204,7 +205,7 @@ var latin_map = {
 'Ồ': 'O',
 'Ổ': 'O',
 'Ỗ': 'O',
-'Ö': 'O',
+'Ö': 'Oe',
 'Ȫ': 'O',
 'Ȯ': 'O',
 'Ȱ': 'O',
@@ -292,7 +293,7 @@ var latin_map = {
 'Ǔ': 'U',
 'Û': 'U',
 'Ṷ': 'U',
-'Ü': 'U',
+'Ü': 'Ue',
 'Ǘ': 'U',
 'Ǚ': 'U',
 'Ǜ': 'U',
@@ -404,7 +405,7 @@ var latin_map = {
 'ầ': 'a',
 'ẩ': 'a',
 'ẫ': 'a',
-'ä': 'a',
+'ä': 'ae',
 'ǟ': 'a',
 'ȧ': 'a',
 'ǡ': 'a',
@@ -616,7 +617,7 @@ var latin_map = {
 'ồ': 'o',
 'ổ': 'o',
 'ỗ': 'o',
-'ö': 'o',
+'ö': 'oe',
 'ȫ': 'o',
 'ȯ': 'o',
 'ȱ': 'o',
@@ -700,6 +701,7 @@ var latin_map = {
 'ᵴ': 's',
 'ᶊ': 's',
 'ȿ': 's',
+'ß': 'ss',
 'ɡ': 'g',
 'ᴑ': 'o',
 'ᴓ': 'o',
@@ -747,7 +749,7 @@ var latin_map = {
 'ǔ': 'u',
 'û': 'u',
 'ṷ': 'u',
-'ü': 'u',
+'ü': 'ue',
 'ǘ': 'u',
 'ǚ': 'u',
 'ǜ': 'u',
