@@ -1,7 +1,7 @@
 # Modifications
--- amd support added
--- changed german Umlaute: Ü to Ue, Ä to ae etc.
--- added 'ß' to 'ss'
+- amd support added
+- changed german Umlaute: Ü to Ue, Ä to ae etc.
+- added 'ß' to 'ss'
 
 # Latinize.js
 
